@@ -1,6 +1,9 @@
 # Project name
 ## Description
 ## Developers
+- [Zelenev Nikolay](https://github.com/c-addict)
+- [Ganigin Kirill](https://github.com/MeltingGlaciers)
+- [Mikhno Dmitry](https://github.com/DuckMan-alt)
 ## Links
 1. [Documentation]()
 2. [Task manager](https://c-addict.atlassian.net/secure/RapidBoard.jspa?rapidView=5&projectKey=PT&atlOrigin=eyJpIjoiYmY5YmRiYTA3NDUyNGU2NTliMWVlZDhhZWYwNjhlNDMiLCJwIjoiaiJ9)
