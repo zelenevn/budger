@@ -1,4 +1,4 @@
-# Project name
+# Budger
 ## Description
 ## Developers
 - [Zelenev Nikolay](https://github.com/c-addict)
