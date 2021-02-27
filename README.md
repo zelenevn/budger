@@ -7,6 +7,6 @@ Budger is a way to keep track of your financial condition at any time. You can c
 - [Mikhno Dmitry](https://github.com/DuckMan-alt)
 ## Links
 1. [Documentation]()
-2. [Task manager](https://vsu-tp.atlassian.net/jira/software/projects/MM/boards/1)
+2. [Task manager](https://trello.com/b/nYnwiHZ4/budger)
 3. [Architecture](https://miro.com/welcomeonboard/W9L6bxgRGaY2etEtO4nO638oNFRzjTv1CzDHtQ9k3UGSHcuAJi5I7IJyusRvudQE)
 4. [Swagger](https://app.swaggerhub.com/apis/vsu.tp/budger/1.0)
