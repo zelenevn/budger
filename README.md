@@ -10,6 +10,6 @@ Budger is a way to keep track of your financial condition at any time. You can c
 2. [Course work](https://github.com/c-addict/budger/blob/master/documents/Course_Work.pdf)
 3. [Documentation]()
 4. [Task manager](https://trello.com/b/nYnwiHZ4/budger)
-5. [Architecture](https://miro.com/welcomeonboard/W9L6bxgRGaY2etEtO4nO638oNFRzjTv1CzDHtQ9k3UGSHcuAJi5I7IJyusRvudQE)
+5. [Architecture](https://miro.com/app/board/o9J_lUY78ko=/)
 6. [Design](https://www.figma.com/file/lRO8sR42XWK94tyTGa9EcW/Programming-technologies?node-id=0%3A1)
 7. [Swagger](https://app.swaggerhub.com/apis/vsu.tp/budger/1.0)
