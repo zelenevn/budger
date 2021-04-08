@@ -6,8 +6,8 @@ CREATE TABLE user_role (
 CREATE TABLE account (
 	id SERIAL PRIMARY KEY,
 	user_name VARCHAR(50) NOT NULL,
-	email VARCHAR(50) UNIQUE NOT NULL,
-	password INTEGER NOT NULL,
+	email VARCHAR(150) UNIQUE NOT NULL,
+	password VARCHAR NOT NULL,
 	account_role INTEGER REFERENCES user_role(id)
 );
 
@@ -24,12 +24,19 @@ CREATE TABLE family (
 );
 
 CREATE TABLE family_account (
-	account_id INTEGER UNIQUE REFERENCES account(id),
-	family_id INTEGER UNIQUE REFERENCES family(id)
+	account_id INTEGER REFERENCES account(id),
+	family_id INTEGER REFERENCES family(id),
+	PRIMARY KEY(account_id, family_id)
 );
 
 CREATE TABLE budget(
 	id SERIAL PRIMARY KEY
+);
+
+CREATE TABLE account_budget (
+	account_id INTEGER REFERENCES account(id),
+	budget_id INTEGER REFERENCES budget(id),
+	PRIMARY KEY(account_id, budget_id)
 );
 
 CREATE TABLE goal (
@@ -38,17 +45,17 @@ CREATE TABLE goal (
 	title VARCHAR(50),
 	value MONEY NOT NULL CHECK(value::numeric>0),
 	description TEXT,
-	date TIMESTAMP NOT NULL
+	expiration_date TIMESTAMP
 );
 
 CREATE TABLE category (
 	id SERIAL PRIMARY KEY,
-	category_name VARCHAR(50) NOT NULL UNIQUE
+	category_name VARCHAR(100) NOT NULL UNIQUE
 );
 
 CREATE TABLE transaction (
 	budget_id INTEGER UNIQUE REFERENCES budget(id),
 	category_id INTEGER UNIQUE REFERENCES category(id),
 	value MONEY NOT NULL,
-	date TIMESTAMP NOT NULL
+	transaction_time TIMESTAMP NOT NULL
 );
