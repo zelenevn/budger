@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+
+  db:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: budger
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --username=admin --locale=ru_RU.utf8"
+    ports:
+    - 8080:8080
+    volumes:
+      - ./init-db/:/docker-entrypoint-initdb.d/
