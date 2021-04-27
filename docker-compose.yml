@@ -14,4 +14,4 @@ services:
     ports:
     - 8080:8080
     volumes:
-      - ./init-db/:/docker-entrypoint-initdb.d/
+      - ./ddl/init-db/:/docker-entrypoint-initdb.d/
