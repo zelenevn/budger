@@ -1,6 +1,7 @@
 package com.data.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 
 @Entity
@@ -8,7 +9,10 @@ import java.sql.Date;
 public class PersonalInformation {
 
     @Id
-    @OneToOne
+    @Column(name = "account_id")
+    private Integer id;
+
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "account_id", referencedColumnName = "id")
     private Account account;
 
@@ -25,6 +29,7 @@ public class PersonalInformation {
 
     public PersonalInformation(Account account, String firstName, String lastName, Date birthdayDate) {
         this.account = account;
+        this.id = account.getId();
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthdayDate = birthdayDate;
