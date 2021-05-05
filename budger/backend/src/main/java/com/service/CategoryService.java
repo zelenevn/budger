@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoryService {
@@ -35,6 +36,12 @@ public class CategoryService {
 
     public void delete(Integer id) {
         repository.deleteById(id);
+    }
+
+    public Optional<Category> getByName(String name){
+
+        return repository.findByCategoryName(name);
+
     }
 
     public List<Category> findAll() {

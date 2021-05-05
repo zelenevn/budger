@@ -1,12 +1,11 @@
 package com.registration;
 
 import com.data.entity.Account;
-import com.data.entity.PersonalInformation;
 import com.email.EmailSender;
 import com.registration.token.ConfirmationToken;
 import com.registration.token.ConfirmationTokenService;
 import com.service.AccountService;
-import com.service.PersonalInformationService;
+import com.service.UserRoleService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,10 +17,10 @@ import java.time.LocalDateTime;
 public class RegistrationService {
 
     private final AccountService accountService;
-    private final PersonalInformationService personalInformationService;
     private final EmailValidator emailValidator;
     private final ConfirmationTokenService confirmationTokenService;
     private final EmailSender emailSender;
+    private final UserRoleService userRoleService;
 
     public String register(RegistrationRequest request) {
         boolean isValidEmail = emailValidator.test(request.getEmail());
@@ -34,11 +33,11 @@ public class RegistrationService {
                 new Account(
                         request.getUsername(),
                         request.getEmail(),
-                        request.getPassword()
+                        request.getPassword(),
+                        userRoleService.getById(1)
                 )
         );
 
-        //TODO Добавить создаение PersonalInformation в этом методе
 
         String link = "http://localhost:8080/api/v1/registration/confirm?token=" + token;
         emailSender.send(

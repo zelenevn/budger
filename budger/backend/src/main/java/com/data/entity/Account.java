@@ -58,14 +58,15 @@ public class Account implements UserDetails {
     private List<Family> families;
 
     private Boolean locked = false;
-    private Boolean enabled = false;
+    private Boolean enabled = true;
 
     public Account() {}
 
-    public Account(String userName, String email, String password) {
+    public Account(String userName, String email, String password, UserRole userRole) {
         this.userName = userName;
         this.email = email;
         this.password = password;
+        this.userRole = userRole;
     }
 
     public Integer getId() {

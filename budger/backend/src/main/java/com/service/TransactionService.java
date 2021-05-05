@@ -2,20 +2,23 @@ package com.service;
 
 import com.data.dao.GoalRepository;
 import com.data.dao.TransactionRepository;
+import com.data.dto.TransactionDto;
+import com.data.entity.Budget;
 import com.data.entity.Goal;
 import com.data.entity.Transaction;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class TransactionService {
 
-    private TransactionRepository repository;
+    private final TransactionRepository repository;
+    private final CategoryService categoryService;
 
-    @Autowired
-    public void setRepository(TransactionRepository repository){ this.repository = repository; }
 
     public Transaction getById(Integer id) {
         return repository.findById(id).orElse(null);
@@ -39,6 +42,19 @@ public class TransactionService {
 
     public void delete(Integer id) {
         repository.deleteById(id);
+    }
+
+    public void createTransactionFromDto(Budget budget, TransactionDto transactionDto){
+
+        Transaction transaction = new Transaction();
+        transaction.setValue(transactionDto.getValue());
+        transaction.setTransactionTime(transactionDto.getTransactionTime());
+        transaction.setCurrency(transactionDto.getCurrency());
+        transaction.setCategory(
+                categoryService.getByName(transactionDto.getCategory()).get()
+        );
+        transaction.setBudget(budget);
+        save(transaction);
     }
 
     public List<Transaction> findAll() {

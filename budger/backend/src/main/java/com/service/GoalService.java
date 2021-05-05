@@ -2,6 +2,8 @@ package com.service;
 
 import com.data.dao.FamilyRepository;
 import com.data.dao.GoalRepository;
+import com.data.dto.GoalDto;
+import com.data.entity.Budget;
 import com.data.entity.Family;
 import com.data.entity.Goal;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +42,20 @@ public class GoalService {
 
     public void delete(Integer id) {
         repository.deleteById(id);
+    }
+
+    public Integer createFromDto(Budget budget, GoalDto goalDto){
+
+        Goal goal = new Goal();
+        goal.setValue(goalDto.getValue());
+        goal.setTitle(goalDto.getTitle());
+        goal.setExpirationDate(goalDto.getExpDate());
+        goal.setDescription(goalDto.getDescription());
+        goal.setCurrency(goalDto.getCurrency());
+        goal.setBudget(budget);
+        save(goal);
+        return goal.getId();
+
     }
 
     public List<Goal> findAll() {

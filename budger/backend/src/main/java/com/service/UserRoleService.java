@@ -2,12 +2,15 @@ package com.service;
 
 import com.data.dao.GoalRepository;
 import com.data.dao.UserRoleRepository;
+import com.data.entity.Account;
 import com.data.entity.Goal;
 import com.data.entity.UserRole;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserRoleService {
@@ -36,6 +39,10 @@ public class UserRoleService {
 
     public void delete(Integer id) {
         repository.deleteById(id);
+    }
+
+    public UserRole getByAccount(Account account){
+        return repository.findByAccounts(account);
     }
 
     public List<UserRole> findAll() {
