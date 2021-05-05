@@ -27,9 +27,9 @@ public class Application {
     @Bean
     CommandLineRunner commandLineRunner(AccountService as, PersonalInformationService ps, UserRoleService us) {
         return args -> {
-            PersonalInformation pi = new PersonalInformation(as.findAll().get(0),"sas","sas", new Date(12312));
-            ps.save(pi);
-            us.findAll();
+            //PersonalInformation pi = new PersonalInformation(as.findAll().get(0),"sas","sas", new Date(12312));
+            //ps.save(pi);
+            //us.findAll();
         };
     }
 

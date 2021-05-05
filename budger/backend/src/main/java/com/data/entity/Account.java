@@ -1,6 +1,12 @@
 package com.data.entity;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -14,7 +20,7 @@ import java.util.List;
                 )
         }
 )
-public class Account {
+public class Account implements UserDetails {
 
     @Id
     @GeneratedValue
@@ -51,6 +57,9 @@ public class Account {
             })
     private List<Family> families;
 
+    private Boolean locked = false;
+    private Boolean enabled = false;
+
     public Account() {}
 
     public Account(String userName, String email, String password) {
@@ -67,12 +76,12 @@ public class Account {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getSecondUsername() {
+        return userName;
     }
 
     public String getEmail() {
@@ -83,8 +92,40 @@ public class Account {
         this.email = email;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        SimpleGrantedAuthority authority =
+                new SimpleGrantedAuthority(userRole.getTitle());
+        return Collections.singletonList(authority);
+    }
+
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public String getUsername() {
+        return email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return !locked;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return enabled;
     }
 
     public void setPassword(String password) {
