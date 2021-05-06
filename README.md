@@ -2,6 +2,10 @@
 
 [Link to application](https://budger-finance.herokuapp.com/)
 
+Test credits: 
+      Login: 1234
+      Passsword: 1234
+
 ## Description
 Budger is a way to keep track of your financial condition at any time. You can check your account status and expenses directly from your computer or mobile phone. Thanks to the finance manager, you can easily plan your budget or your family's budget without wasting your precious time on it.
 ## Developers
