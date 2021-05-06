@@ -15,4 +15,4 @@ Budger is a way to keep track of your financial condition at any time. You can c
 4. [Task manager](https://trello.com/b/nYnwiHZ4/budger)
 5. [Architecture](https://miro.com/app/board/o9J_lUY78ko=/)
 6. [Design](https://www.figma.com/file/lRO8sR42XWK94tyTGa9EcW/Programming-technologies?node-id=0%3A1)
-7. [Swagger](https://app.swaggerhub.com/apis/vsu.tp/budger/1.0)
+7. [Swagger](budger-finance.herokuapp. com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/)
