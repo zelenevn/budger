@@ -1,6 +1,6 @@
 # Budger
 
-[Link to application](https://budger-finance.herokuapp.com/)
+[Link to application](https://budger-finance.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/)
 
 Test credits: 
       Login: 1234
