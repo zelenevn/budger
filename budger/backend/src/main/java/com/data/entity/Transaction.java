@@ -27,7 +27,7 @@ public class Transaction {
     @JoinColumn(name = "budget_id", referencedColumnName = "id")
     private Budget budget;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 

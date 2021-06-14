@@ -7,6 +7,7 @@ import com.data.entity.Transaction;
 import com.service.AccountService;
 import com.service.CategoryService;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
@@ -27,6 +28,14 @@ public class BudgerUtils {
         return accountService.getByEmail(
                 SecurityContextHolder.getContext().getAuthentication().getName()
         ).get();
+    }
+
+    public GrantedAuthority getCurrRole(){
+        return (GrantedAuthority)SecurityContextHolder.getContext().getAuthentication().getAuthorities().toArray()[0];
+    }
+
+    public void logout(){
+        SecurityContextHolder.clearContext();
     }
 
     public List<SummaryDto> summary(List<Transaction> transactions){

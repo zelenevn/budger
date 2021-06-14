@@ -41,8 +41,7 @@ public class ConfirmationToken {
 
     @ManyToOne
     @JoinColumn(
-            nullable = false,
-            name = "account_id"
+            name = "account_id", referencedColumnName = "id"
     )
     private Account account;
 

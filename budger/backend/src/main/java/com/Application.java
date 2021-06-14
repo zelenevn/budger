@@ -8,10 +8,12 @@ import com.data.entity.PersonalInformation;
 import com.service.AccountService;
 import com.service.PersonalInformationService;
 import com.service.UserRoleService;
+import io.swagger.v3.core.model.ApiDescription;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 
 import java.sql.Date;
 
@@ -27,9 +29,7 @@ public class Application {
     @Bean
     CommandLineRunner commandLineRunner(AccountService as, PersonalInformationService ps, UserRoleService us) {
         return args -> {
-            //PersonalInformation pi = new PersonalInformation(as.findAll().get(0),"sas","sas", new Date(12312));
-            //ps.save(pi);
-            //us.findAll();
+
         };
     }
 
