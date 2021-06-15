@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class GoalService {
@@ -19,8 +20,8 @@ public class GoalService {
     @Autowired
     public void setRepository(GoalRepository repository){ this.repository = repository; }
 
-    public Goal getById(Integer id) {
-        return repository.findById(id).orElse(null);
+    public Optional<Goal> getById(Integer id) {
+        return repository.findById(id);
     }
 
     public void save(Goal goal) {

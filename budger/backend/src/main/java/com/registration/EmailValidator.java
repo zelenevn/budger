@@ -10,7 +10,7 @@ public class EmailValidator implements Predicate <String>{
     @Override
     public boolean test(String s) {
 
-        //Проверка корректности email
+        //TODO: Проверка корректности email
         return true;
 
     }
