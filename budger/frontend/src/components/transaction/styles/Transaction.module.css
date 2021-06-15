@@ -1,0 +1,8 @@
+.Transaction {
+    width: 350px;
+    height: 50px;
+    background-color: #E3E8FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

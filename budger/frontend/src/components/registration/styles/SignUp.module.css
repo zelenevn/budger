@@ -1,0 +1,55 @@
+.SignUp {
+
+}
+
+.SignUpContainer {
+    margin-top: 174px;
+}
+
+.SignUpContainer h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.SignUpContainer fieldset {
+    border: 0;
+}
+
+.SignUpContainer input {
+    margin-top: 16px;
+    width: 255px;
+    height: 40px;
+    border-radius: 22px;
+    border: 0;
+    background-color: #E3E8FF;
+    font-size: 20px;
+}
+
+.SignUpContainer button {
+    margin-top: 16px;
+    background-color: #8DD070;
+    border-radius: 22px;
+    border: 0;
+    width: 225px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.SignUpContainer p {
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.SignUpContainer a {
+    text-decoration: none;
+    color: #8DD070;
+}
+
+.SignUpContainer a:visited {
+    text-decoration: none;
+    color: #8DD070;
+}

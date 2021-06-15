@@ -1,0 +1,57 @@
+.Calculator {
+    display: flex;
+    flex-direction: column;
+}
+
+.CalculatorContainer {
+    width: 445px;
+    height: 600px;
+    background-color: #E3E8FF;
+    border-radius: 22px;
+    border: 0;
+    align-self: center;
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.CalculatorContainer fieldset {
+    border: 0;
+}
+
+.CalculatorContainer input {
+    background-color: #FFFFFF;
+    width: 350px;
+    height: 50px;
+    border: 0;
+    border-radius: 22px;
+    margin-top: 32px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.CalculatorContainer button {
+    width: 160px;
+    height: 50px;
+    background-color: #8DD070;
+    border: 0;
+    border-radius: 22px;
+    margin-top: 32px;
+    font-size: 20px;
+}
+
+.CalculatorContainer p {
+    width: 350px;
+    align-self: center;
+}
+
+.CalculatorContainer a {
+    text-decoration: none;
+    color: #8DD070;
+}
+
+.CalculatorContainer a:visited {
+    text-decoration: none;
+    color: #8DD070;
+}

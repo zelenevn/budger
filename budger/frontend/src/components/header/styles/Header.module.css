@@ -1,0 +1,83 @@
+
+.Header {
+
+}
+
+.HeaderContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ImageContainer {
+    margin-left: 140px;
+    margin-top: 16px;
+}
+
+.StaticLinksContainer {
+    margin-left: 221px;
+    margin-top: 32px;
+}
+
+.DynamicLinksContainer {
+    margin-left: 122px;
+    margin-top: 32px;
+    margin-right: 105px;
+}
+
+.StaticLinksContainer a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 130%;
+    text-decoration: none;
+    color: #000000;
+}
+
+.StaticLinksContainer a:hover {
+    border-bottom: 1px solid #8DD070;
+}
+
+.StaticLinksContainer a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+.StaticLinksContainer ul {
+    list-style-type: none;
+}
+
+.StaticLinksContainer li {
+    display: inline-block;
+    margin-left: 32px;
+}
+
+.DynamicLinksContainer ul {
+    list-style-type: none;
+}
+
+.DynamicLinksContainer li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.DynamicLinksContainer a {
+    display: block;
+    width: 95px;
+    height: 30px;
+    background-color: #8DD070;
+    border-radius: 22px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 17px;
+    line-height: 180%;
+}
+
+.DynamicLinksContainer a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.LongLink a{
+    width: 179px;
+}

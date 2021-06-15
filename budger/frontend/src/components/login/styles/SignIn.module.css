@@ -1,0 +1,56 @@
+.SignIn {
+
+}
+
+.SignInContainer {
+    margin-top: 214px;
+}
+
+.SignInContainer h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 0;
+}
+
+.SignInContainer fieldset {
+    border: 0;
+}
+
+.SignInContainer input {
+    margin-top: 16px;
+    width: 255px;
+    height: 40px;
+    border-radius: 22px;
+    border: 0;
+    background-color: #E3E8FF;
+    font-size: 20px;
+}
+
+.SignInContainer button {
+    margin-top: 16px;
+    background-color: #8DD070;
+    border-radius: 22px;
+    border: 0;
+    width: 125px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.SignInContainer p {
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.SignInContainer a {
+    text-decoration: none;
+    color: #8DD070;
+}
+
+.SignInContainer a:visited {
+    text-decoration: none;
+    color: #8DD070;
+}
