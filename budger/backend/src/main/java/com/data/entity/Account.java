@@ -45,7 +45,6 @@ public class Account implements UserDetails {
     @JoinColumn(name = "budget_id", referencedColumnName = "id")
     private Budget budget;
 
-
     @ManyToMany
     @JoinTable(
             name="family_account",
@@ -57,8 +56,7 @@ public class Account implements UserDetails {
             })
     private List<Family> families;
 
-    private Boolean locked = false;
-    private Boolean enabled = true;
+    private Boolean enabled = false;
 
     public Account() {}
 
@@ -115,11 +113,6 @@ public class Account implements UserDetails {
     }
 
     @Override
-    public boolean isAccountNonLocked() {
-        return !locked;
-    }
-
-    @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
@@ -153,7 +146,14 @@ public class Account implements UserDetails {
         return families;
     }
 
+    public void setEnabled(){enabled=true;}
+
     public void setFamilies(List<Family> families) {
         this.families = families;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
     }
 }

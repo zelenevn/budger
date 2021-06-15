@@ -3,6 +3,30 @@
     height: 50px;
     background-color: #E3E8FF;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
+    border-radius: 22px;
+}
+
+.Transaction img {
+    width: 14px;
+    height: 20px;
+    margin-left: 32px;
+    margin-top: 15px;
+}
+
+.Value {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 20%;
+    margin-left: 32px;
+}
+
+.Date {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    margin-right: 32px;
+    margin-top: 24px;
 }

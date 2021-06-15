@@ -4,17 +4,30 @@
 }
 
 .AccountContainer {
-
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .Statistics {
+    width: 255px;
+    height: 255px;
+    background-color: #E3E8FF;
+    border-radius: 22px;
+    border: 0;
+    margin-left: 140px;
 
 }
 
 .Transactions {
+    margin-left: 30px;
+}
 
+.Transactions ul {
+    list-style-type: none;
 }
 
 .Filter {
-
+    margin-right: 140px;
 }

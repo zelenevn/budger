@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -28,6 +29,10 @@ public class RegistrationService {
         if (!isValidEmail)
             throw new IllegalStateException("email not valid");
 
+
+        Optional<Account> opt = accountService.getByEmail(request.getEmail());
+        if (!opt.isPresent() && opt.get().isEnabled())
+            accountService.delete(opt.get().getId());
 
         String token = accountService.signUpUser(
                 new Account(
@@ -65,6 +70,7 @@ public class RegistrationService {
             throw  new IllegalStateException("token expired");
 
         confirmationTokenService.setConfirmedAt(token);
+        confirmationTokenService.getToken(token).get().getAccount().setEnabled();
         return "confirmed";
 
     }

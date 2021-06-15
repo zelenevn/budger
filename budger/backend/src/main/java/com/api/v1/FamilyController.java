@@ -116,4 +116,22 @@ public class FamilyController {
         return null;
     }
 
+    @DeleteMapping(
+            path = "delete/{id}"
+    )
+    public String delete(@PathVariable Integer id){
+
+        Account account = budgerUtils.getCurrUser();
+        if (!account.getId().equals(id) &&
+                !budgerUtils.getCurrRole().getAuthority().equals("Admin")) {
+            //TODO: return error page
+            return "error";
+        }
+        Optional<Family> opt = familyService.getById(id);
+        if (opt.isPresent())
+            if (opt.get().getAccounts().contains(account) || budgerUtils.getCurrRole().getAuthority().equals("Admin"))
+                familyService.delete(id);
+        return "uspeh";
+    }
+
 }
