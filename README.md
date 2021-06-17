@@ -10,7 +10,7 @@ Budger is a way to keep track of your financial condition at any time. You can c
 - [Mikhno Dmitry](https://github.com/DuckMan-alt) | Business Analyst, Database Administrator
 ## Links
 1. [Technical task](https://github.com/c-addict/budger/blob/master/documents/technical_task.pdf)
-2. [Course work](https://github.com/c-addict/budger/blob/master/documents/Course_Work.pdf)
+2. [Course work](https://github.com/c-addict/budger/blob/master/documents/Course_work%20.pdf)
 3. [Presentation](https://youtu.be/ZT-gu26JGRk)
 4. [Demo video](https://youtu.be/Y6WsJ_nFb8I)
 5. [Task manager](https://trello.com/b/nYnwiHZ4/budger)
