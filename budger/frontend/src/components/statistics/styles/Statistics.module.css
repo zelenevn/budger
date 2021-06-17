@@ -1,0 +1,45 @@
+
+.Statistics {
+    width: 200px;
+    height: 200px;
+    background-color: #E3E8FF;
+    border-radius: 22px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Statistics p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+}
+
+.Income {
+    color: #8DD070;
+}
+
+.Expenses {
+    color: #FF5252;
+}
+
+.Money {
+}
+
+.List {
+    display: flex;
+    flex-direction: row;
+}
+
+.List ul {
+    list-style-type: decimal;
+}
+
+.List li {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 130%;
+}

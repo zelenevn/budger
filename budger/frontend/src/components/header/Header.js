@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
-import style from "./styles/Header.module.css"
-import logo from "../../assets/images/logo.svg"
+import {useStateValue} from "../../StateProvider";
+import style from "./styles/Header.module.css";
+import logo from "../../assets/images/logo.svg";
 
-
-const LoggedInLinks = <div></div>
 
 const Header = () => {
+
+    const [{isLoggedIn, login}, dispatch] = useStateValue();
+
 
     return (
         <header className={style.Header}>
@@ -41,19 +43,39 @@ const Header = () => {
                 </div>
 
                 <div className={style.DynamicLinksContainer}>
-                    <ul>
-                        <li>
-                            <Link to="/login">
-                                Войти
-                            </Link>
-                        </li>
+                    {
+                        isLoggedIn ?
+                            (<div>
+                                <ul>
+                                    <li className={style.Login}>
+                                        <Link to="/account">
+                                            {login}
+                                        </Link>
+                                    </li>
 
-                        <li className={style.LongLink}>
-                            <Link to="/register">
-                                Зарегистрироваться
-                            </Link>
-                        </li>
-                    </ul>
+                                    <li className={style.LongLink}>
+                                        <Link to="/logout">
+                                            Выйти
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>) :
+                            (<div>
+                                <ul>
+                                    <li>
+                                        <Link to="/login">
+                                            Войти
+                                        </Link>
+                                    </li>
+
+                                    <li className={style.LongLink}>
+                                        <Link to="/register">
+                                            Зарегистрироваться
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>)
+                    }
                 </div>
             </div>
         </header>

@@ -1,0 +1,49 @@
+.ReportView {
+    width: 600px;
+    height: 600px;
+    border-radius: 22px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Empty p {
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+
+.Categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Categories p {
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.Categories ul {
+    list-style-type: decimal;
+    align-self: center;
+}
+
+.Categories li {
+    width: 100px;
+}
+
+.Close {
+    background-color: #FF5252;
+    border: 0;
+    width: 125px;
+    height: 40px;
+    font-size: 20px;
+    align-self: center;
+    margin-top: 16px;
+}

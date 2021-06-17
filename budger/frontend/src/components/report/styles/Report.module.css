@@ -1,0 +1,60 @@
+
+
+.Report {
+
+}
+
+.ReportContainer {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Form {
+
+}
+
+.Form fieldset {
+    border: 0;
+}
+
+.ReportButton {
+    background-color: #8DD070;
+    border: 0;
+    width: 255px;
+    height: 40px;
+    font-size: 20px;
+    align-self: center;
+}
+
+.Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Date {
+    align-self: center;
+    width: 255px;
+    height: 40px;
+    background-color: #E3E8FF;
+    text-align: center;
+    border: 0;
+}
+
+.Close {
+    background-color: #FF5252;
+    border: 0;
+    width: 125px;
+    height: 40px;
+    font-size: 20px;
+    align-self: center;
+    margin-top: 16px;
+
+}

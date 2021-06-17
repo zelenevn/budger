@@ -30,19 +30,19 @@ const Contacts = () => {
                             <ul>
 
                                 <li>
-                                    <a href="">
+                                    <a href="mailto:budger.finance@gmail.com">
                                         <img src={gmail} alt="Gmail logo"/>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="">
+                                    <a href="https://github.com/c-addict/budger">
                                         <img src={github} alt="Github logo"/>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="">
+                                    <a href="https://discord.gg/CngEZfw5Vz">
                                         <img src={discord} alt="Discord image"/>
                                     </a>
                                 </li>

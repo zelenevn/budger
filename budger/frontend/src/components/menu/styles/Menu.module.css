@@ -1,0 +1,30 @@
+.Menu {
+    margin-left: 128px;
+    margin-top: 64px;
+}
+
+.Menu ul {
+    list-style-type: none;
+}
+
+.Menu li {
+    margin-top: 16px;
+}
+
+.Menu a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 130%;
+    text-decoration: none;
+    color: #000000;
+}
+
+.Menu a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+.Menu a:hover {
+    border-bottom: 1px solid #8DD070;
+}

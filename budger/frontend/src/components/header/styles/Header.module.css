@@ -80,4 +80,14 @@
 
 .LongLink a{
     width: 179px;
+    margin-left: 16px;
+}
+
+.Login {
+
+}
+
+.Login a {
+    width: calc(100% + 20px);
+    margin-right: 10px;
 }

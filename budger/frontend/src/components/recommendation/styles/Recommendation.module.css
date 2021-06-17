@@ -1,0 +1,22 @@
+.Recommendation {
+    width: 350px;
+    height: 50px;
+    background-color: #E3E8FF;
+    border-radius: 22px;
+    margin-top: 16px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Recommendation ul {
+    list-style-type: none;
+}
+
+.Recommendation p {
+    text-align: center;
+}
+
+.Recommendation span {
+    color: #8DD070;
+}

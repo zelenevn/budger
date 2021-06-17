@@ -2,12 +2,57 @@ import React, {useState} from "react";
 import style from "./styles/SignUp.module.css";
 import Header from "../header/Header";
 import {Link} from "react-router-dom";
+import {useStateValue} from "../../StateProvider";
+import {useHistory} from "react-router-dom";
 
 const SignUp = () => {
 
+    const history = useHistory();
+    const [{}, dispatch] = useStateValue();
+
+    const [isError, setIsError] = useState(false);
     const [login, setLogin] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const confirmRegistration = async event => {
+      event.preventDefault();
+
+      const url = "https://budger-backend.herokuapp.com/registration";
+      const data = {
+          login: login,
+          email:email,
+          password:password
+      };
+
+      await fetch(
+          url,
+          {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(data)
+          }
+      ).then(response => {
+          if (response.ok) {
+              return response.json();
+          }
+      }).then(data => {
+          const value = {
+              login: data.login,
+              token: data.token
+          };
+          dispatch({
+              type: "LOGIN",
+              login: value.login,
+              token: value.token
+          });
+          history.push("/account");
+      }).catch(error => {
+          setIsError(true);
+      }).finally();
+    };
 
     return (
         <div className={style.SignUp}>
@@ -49,13 +94,19 @@ const SignUp = () => {
                             />
                         </fieldset>
 
-                        <button>Зарегестриорваться</button>
+                        <button
+                            onClick={confirmRegistration}
+                        >
+                            Зарегистрироваться
+                        </button>
 
                     </fieldset>
 
                 </form>
 
-                <p>Уже зарегестрированы?</p>
+                {isError && <p className={style.Error}>Логин и почтовый адрес уже зарегистрированы</p>}
+
+                <p>Уже зарегистрированы?</p>
 
                 <p>
                     <Link to="/login">

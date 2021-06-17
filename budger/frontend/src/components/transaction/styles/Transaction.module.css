@@ -6,6 +6,8 @@
     flex-direction: row;
     justify-content: space-between;
     border-radius: 22px;
+    margin-top: 16px;
+    align-self: center;
 }
 
 .Transaction img {

@@ -9,7 +9,7 @@ const Transaction = props => {
 
     return (
         <div className={style.Transaction}>
-            {props.type ?
+            {props.category === "Доход" ?
                 <img src={income} alt=""/> :
                 <img src={expenses} alt=""/>}
 

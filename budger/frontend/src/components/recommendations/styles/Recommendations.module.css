@@ -1,0 +1,22 @@
+.Recommendations {
+
+}
+
+.RecommendationsContainer {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.List {
+
+}
+
+.List ul {
+    list-style-type: none;
+
+}
+
+.List li {
+}

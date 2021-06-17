@@ -26,6 +26,7 @@
     border: 0;
     background-color: #E3E8FF;
     font-size: 20px;
+    text-align: center;
 }
 
 .SignInContainer button {
@@ -36,6 +37,10 @@
     width: 125px;
     height: 40px;
     font-size: 20px;
+}
+
+.Error {
+    color: #FF5252;
 }
 
 .SignInContainer p {

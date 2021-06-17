@@ -1,0 +1,32 @@
+.Goal {
+    width: 250px;
+    height: 250px;
+    background-color: #E3E8FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 22px;
+    margin-top: 16px;
+    margin-left: 16px;
+    float: left;
+}
+
+.Goal h2 {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.Value {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.Date {
+    
+}
+
+.Description {
+
+}
