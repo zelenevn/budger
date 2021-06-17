@@ -78,6 +78,7 @@ const Goals = () => {
 
     const addGoal = async event => {
         event.preventDefault();
+        ym(80995588,'reachGoal','create_transaction');
         const url = "https://budger-backend.herokuapp.com/goal";
         const data = {
             login: login,

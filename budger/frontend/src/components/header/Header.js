@@ -4,11 +4,9 @@ import {useStateValue} from "../../StateProvider";
 import style from "./styles/Header.module.css";
 import logo from "../../assets/images/logo.svg";
 
-
 const Header = () => {
 
     const [{isLoggedIn, login}, dispatch] = useStateValue();
-
 
     return (
         <header className={style.Header}>

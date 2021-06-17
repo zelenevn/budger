@@ -8,6 +8,8 @@ import Transaction from "../transaction/Transaction";
 import DatePicker from "react-date-picker";
 import Menu from "../menu/Menu";
 import Statistics from "../statistics/Statistics";
+import ym from "react-yandex-metrika";
+
 
 const Account = () => {
 
@@ -87,6 +89,7 @@ const Account = () => {
 
     const addTransaction = async event => {
         event.preventDefault();
+        ym(80995588,'reachGoal','add_transaction');
 
         const url = "https://budger-backend.herokuapp.com/transaction";
         const data = {
