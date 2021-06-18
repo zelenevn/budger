@@ -8,12 +8,16 @@ Budger is a way to keep track of your financial condition at any time. You can c
 - [Zelenev Nikolay](https://github.com/c-addict) | Team Lead, Frontend Developer, DevOps
 - [Ganigin Kirill](https://github.com/MeltingGlaciers) | Backend Developer, QA Engineer
 - [Mikhno Dmitry](https://github.com/DuckMan-alt) | Business Analyst, Database Administrator
-## Links
-1. [Technical task](https://github.com/c-addict/budger/blob/master/documents/technical_task.pdf)
-2. [Course work](https://github.com/c-addict/budger/blob/master/documents/Course_work%20.pdf)
-3. [Presentation](https://youtu.be/ZT-gu26JGRk)
-4. [Demo video](https://youtu.be/5CwyuMuOS-M)
-5. [Task manager](https://trello.com/b/nYnwiHZ4/budger)
-6. [Architecture](https://miro.com/app/board/o9J_lUY78ko=/)
-7. [Design](https://www.figma.com/file/lRO8sR42XWK94tyTGa9EcW/Programming-technologies?node-id=0%3A1)
-8. [Swagger](https://app.swaggerhub.com/apis-docs/MeltingGlaciers/Budger/v5/)
+## Documents
+- [Technical task](https://github.com/c-addict/budger/blob/master/documents/technical_task.pdf)
+- [Course work](https://github.com/c-addict/budger/blob/master/documents/Course_work%20.pdf)
+- [Smoke Testing](https://github.com/c-addict/budger/blob/master/documents/smoke.pdf), [System Testing](https://github.com/c-addict/budger/blob/master/documents/system.pdf)
+## Development
+- [Task manager](https://trello.com/b/nYnwiHZ4/budger)
+- [Architecture](https://miro.com/app/board/o9J_lUY78ko=/)
+- [Design](https://www.figma.com/file/lRO8sR42XWK94tyTGa9EcW/Programming-technologies?node-id=0%3A1)
+- [Swagger](https://app.swaggerhub.com/apis-docs/MeltingGlaciers/Budger/v5/)
+- [Yandex.Metrika](https://metrika.yandex.ru/dashboard?id=80995588)
+## Videos
+- [Presentation](https://youtu.be/ZT-gu26JGRk)
+- [Demo video](https://youtu.be/5CwyuMuOS-M)
