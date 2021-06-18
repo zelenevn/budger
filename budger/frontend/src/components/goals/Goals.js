@@ -7,7 +7,6 @@ import Menu from "../menu/Menu";
 import ReactModal from "react-modal";
 import Goal from "../goal/Goal";
 import DatePicker from "react-date-picker";
-import ym from "react-yandex-metrika";
 
 
 const Goals = () => {
@@ -80,9 +79,6 @@ const Goals = () => {
     const addGoal = async event => {
         event.preventDefault();
 
-        if (typeof window['ym'] !== undefined) {
-            window['ym'](80995588,'reachGoal','create_transaction')
-        }
         const url = "https://budger-backend.herokuapp.com/goal";
         const data = {
             login: login,

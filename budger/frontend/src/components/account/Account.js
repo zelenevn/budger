@@ -89,8 +89,9 @@ const Account = () => {
 
     const addTransaction = async event => {
         event.preventDefault();
+
         if (typeof window['ym'] !== undefined) {
-            window['ym'](80995588,'reachGoal', 'add_transaction')
+            window['ym'](80995588,'reachGoal','create_transaction')
         }
 
         const url = "https://budger-backend.herokuapp.com/transaction";
@@ -119,6 +120,11 @@ const Account = () => {
     };
 
     const openModal = () => {
+
+        if (typeof window['ym'] !== undefined) {
+            window['ym'](80995588,'reachGoal', 'add_transaction')
+        }
+
         setIsModalOpen(true);
     }
 
