@@ -19,5 +19,5 @@ Budger is a way to keep track of your financial condition at any time. You can c
 - [Swagger](https://app.swaggerhub.com/apis-docs/MeltingGlaciers/Budger/v5/)
 - [Yandex.Metrika](https://metrika.yandex.ru/dashboard?id=80995588)
 ## Videos
-- [Presentation](https://youtu.be/ZT-gu26JGRk)
+- [Presentation]()
 - [Demo video](https://youtu.be/5CwyuMuOS-M)
