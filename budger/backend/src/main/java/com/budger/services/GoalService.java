@@ -1,9 +1,13 @@
 package com.budger.services;
 
 import com.budger.data.dto.GoalDto;
+import com.budger.data.dto.v2.goal.GetGoalDto;
+import com.budger.data.dto.v2.goal.UpdateGoalDto;
+import com.budger.data.dto.v2.transaction.GetTransactionDto;
 import com.budger.data.entities.Account;
 import com.budger.data.entities.Goal;
 import com.budger.exceptions.AccountDoesNotExistsException;
+import com.budger.exceptions.GoalDoesNotExistsException;
 import com.budger.repositories.AccountRepository;
 import com.budger.repositories.GoalRepository;
 import org.springframework.security.web.header.writers.StaticHeadersWriter;
@@ -63,5 +67,57 @@ public class GoalService {
         } else {
             throw new AccountDoesNotExistsException("Account does not exists.");
         }
+    }
+
+    public GetGoalDto read(Integer id) {
+        Optional<Goal> goalOptional = goalRepository.findById(id);
+        if (goalOptional.isPresent()) {
+            Goal goal = goalOptional.get();
+            GetGoalDto goalDto = new GetGoalDto(
+                    goal.getId(),
+                    goal.getTitle(),
+                    goal.getValue(),
+                    goal.getDescription(),
+                    goal.getExpirationDate()
+            );
+
+            return goalDto;
+        } else
+            throw new GoalDoesNotExistsException(String.format("Goal with %d id does not exists", id));
+    }
+
+    public List<GetGoalDto> readAllGoals(String login) {
+        Optional<Account> accountOptional = accountRepository.findByLogin(login);
+
+        if (accountOptional.isPresent()) {
+            Account account = accountOptional.get();
+            List<Goal> goals = account.getBudget().getGoals();
+            List<GetGoalDto> goalDtos = new LinkedList<>();
+            goals.forEach(goal -> {
+                goalDtos.add(new GetGoalDto(
+                        goal.getId(),
+                        goal.getTitle(),
+                        goal.getValue(),
+                        goal.getDescription(),
+                        goal.getExpirationDate()
+                ));
+            });
+            return goalDtos;
+        } else {
+            throw new AccountDoesNotExistsException("Account does not exists.");
+        }
+    }
+
+    public void delete(Integer id) {
+        Optional<Goal> goalOptional = goalRepository.findById(id);
+        if (goalOptional.isPresent()) {
+            Goal goal = goalOptional.get();
+            goalRepository.delete(goal);
+        } else
+            throw new GoalDoesNotExistsException(String.format("Goal with %d id does not exists", id));
+    }
+
+    public void update(Integer id, UpdateGoalDto goalDto) {
+        throw new UnsupportedOperationException();
     }
 }
