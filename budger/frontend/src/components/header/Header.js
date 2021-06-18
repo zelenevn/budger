@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import {useStateValue} from "../../StateProvider";
 import style from "./styles/Header.module.css";
 import logo from "../../assets/images/logo.svg";
+import {YMInitializer as YM} from "react-yandex-metrika";
+import ym from "react-yandex-metrika";
 
 const Header = () => {
 
@@ -10,7 +12,7 @@ const Header = () => {
 
     return (
         <header className={style.Header}>
-
+            <YM accounts={[80995588]}/>
             <div className={style.HeaderContainer}>
 
                 <div className={style.ImageContainer}>

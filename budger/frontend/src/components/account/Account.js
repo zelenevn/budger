@@ -89,7 +89,9 @@ const Account = () => {
 
     const addTransaction = async event => {
         event.preventDefault();
-        ym(80995588,'reachGoal','add_transaction');
+        if (typeof window['ym'] !== undefined) {
+            window['ym'](80995588,'reachGoal', 'add_transaction')
+        }
 
         const url = "https://budger-backend.herokuapp.com/transaction";
         const data = {

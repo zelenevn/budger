@@ -6,6 +6,7 @@ import Header from "../header/Header";
 import Menu from "../menu/Menu";
 import DatePicker from "react-date-picker";
 import ReportView from "../ReportView/ReportView";
+import ym from "react-yandex-metrika";
 
 
 const Report = () => {
@@ -48,7 +49,9 @@ const Report = () => {
 
     const generateReport = async event => {
         event.preventDefault();
-        ym(80995588,'reachGoal','show_report');
+        if (typeof window['ym'] !== undefined) {
+            window['ym'](80995588,'reachGoal','show_report')
+        }
         const url = "https://budger-backend.herokuapp.com/report";
         const data = {
             login: login,
